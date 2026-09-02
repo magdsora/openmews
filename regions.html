@@ -570,7 +570,6 @@ function drawCrumb(){
     h+=`<span class="sep">›</span><b>${p?p.name:scope.parent}</b>`;}
   const n=scopeIdx().length;
   h+=`<span class="sep">·</span><span class="quiet">${n} ${n===1?UL:UP}</span>`;
-  if(scope.level!=="belt")h+=`<span class="sep">·</span><a data-go="up" tabindex="0" role="button">↑ back</a>`;
   $("#crumb").innerHTML=h;
   const mb=$("#mapback");mb.hidden=scope.level==="belt";
   mb.textContent="← "+(scope.level==="parent"?scope.country:`all countries`);}
