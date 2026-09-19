@@ -122,7 +122,7 @@
   /* ---- sections: rule + whitespace, no cards ---- */
   section{background:transparent;border:0;border-top:1px solid var(--ink);border-radius:0;
     padding:24px 0 14px;margin:38px 0 0}
-  section#now{margin-top:30px}
+  section#now{margin-top:18px}
   .secnum{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
     color:var(--brand);margin-bottom:8px}
 
@@ -152,11 +152,12 @@
   .saysc b{color:var(--ink)}
 
   /* ---- figures: hairline above, large numeral ---- */
-  .kpihd{display:flex;align-items:baseline;flex-wrap:wrap;margin:28px 0 -6px}
+  .kpihd{display:flex;align-items:baseline;flex-wrap:wrap;margin:30px 0 -6px;padding-top:22px;
+    border-top:1px solid var(--rule)}
   .kpihd .lab{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
     color:var(--brand)}
   .grid{display:grid;gap:14px}
-  .kpis{grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:22px;margin:14px 0 0}
+  .kpis{grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:22px;margin:14px 0 6px}
   .kpi{background:transparent;border:0;border-top:2px solid var(--ink);border-radius:0;padding:12px 0 0}
   /* every figure box is the same fixed height and its content sits on the bottom, so the
      labels align across the row and a district name that wraps to two lines cannot move
@@ -394,9 +395,6 @@
   </div>
 
   <div id="printscope"></div>
-  <div class="kpihd"><span class="lab">This week at a glance</span>
-    <span class="stagslot" data-stag></span></div>
-  <div class="grid kpis" id="kpis"></div>
 
   <!-- ============ 1. THIS WEEK ============ -->
   <section id="now">
@@ -449,6 +447,9 @@
         </div>
       </div>
     </div>
+    <div class="kpihd"><span class="lab">This week at a glance</span>
+      <span class="stagslot" data-stag></span></div>
+    <div class="grid kpis" id="kpis"></div>
     <div id="detail" style="margin-top:14px"></div>
   </section>
 
